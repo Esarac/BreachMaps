@@ -1,6 +1,6 @@
-﻿namespace EarthquakeMap
+﻿namespace EarthquakeMap.Gui
 {
-    partial class Form1
+    partial class Window
     {
         /// <summary>
         /// Variable del diseñador necesaria.
