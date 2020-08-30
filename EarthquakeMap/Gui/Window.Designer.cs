@@ -28,36 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.importButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.importMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.components = new System.ComponentModel.Container();
+            this.styleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabMenu = new MetroFramework.Controls.MetroTabControl();
+            this.tabMap = new MetroFramework.Controls.MetroTabPage();
             this.gMap = new GMap.NET.WindowsForms.GMapControl();
-            this.menu.SuspendLayout();
+            this.tabTable = new MetroFramework.Controls.MetroTabPage();
+            this.tabCharts = new MetroFramework.Controls.MetroTabPage();
+            this.importButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.styleManager)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.tabMenu.SuspendLayout();
+            this.tabMap.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menu
+            // styleManager
             // 
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importButton});
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(800, 24);
-            this.menu.TabIndex = 0;
+            this.styleManager.Owner = this;
+            this.styleManager.Style = MetroFramework.MetroColorStyle.Orange;
             // 
-            // importButton
+            // flowLayoutPanel1
             // 
-            this.importButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importMenu});
-            this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(37, 20);
-            this.importButton.Text = "File";
+            this.flowLayoutPanel1.Controls.Add(this.importButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 60);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1027, 45);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // importMenu
+            // tabMenu
             // 
-            this.importMenu.Name = "importMenu";
-            this.importMenu.Size = new System.Drawing.Size(110, 22);
-            this.importMenu.Text = "Import";
-            this.importMenu.Click += new System.EventHandler(this.Import_Click);
+            this.tabMenu.Controls.Add(this.tabMap);
+            this.tabMenu.Controls.Add(this.tabTable);
+            this.tabMenu.Controls.Add(this.tabCharts);
+            this.tabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabMenu.Location = new System.Drawing.Point(20, 105);
+            this.tabMenu.Name = "tabMenu";
+            this.tabMenu.SelectedIndex = 0;
+            this.tabMenu.Size = new System.Drawing.Size(1027, 429);
+            this.tabMenu.TabIndex = 2;
+            this.tabMenu.UseSelectable = true;
+            // 
+            // tabMap
+            // 
+            this.tabMap.Controls.Add(this.gMap);
+            this.tabMap.HorizontalScrollbarBarColor = true;
+            this.tabMap.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabMap.HorizontalScrollbarSize = 0;
+            this.tabMap.Location = new System.Drawing.Point(4, 38);
+            this.tabMap.Name = "tabMap";
+            this.tabMap.Size = new System.Drawing.Size(1019, 387);
+            this.tabMap.TabIndex = 0;
+            this.tabMap.Text = "  Map";
+            this.tabMap.VerticalScrollbarBarColor = true;
+            this.tabMap.VerticalScrollbarHighlightOnWheel = false;
+            this.tabMap.VerticalScrollbarSize = 0;
             // 
             // gMap
             // 
@@ -68,7 +94,8 @@
             this.gMap.GrayScaleMode = false;
             this.gMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMap.LevelsKeepInMemory = 5;
-            this.gMap.Location = new System.Drawing.Point(0, 24);
+            this.gMap.Location = new System.Drawing.Point(0, 0);
+            this.gMap.Margin = new System.Windows.Forms.Padding(4);
             this.gMap.MarkersEnabled = true;
             this.gMap.MaxZoom = 2;
             this.gMap.MinZoom = 2;
@@ -82,33 +109,86 @@
             this.gMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMap.ShowTileGridLines = false;
-            this.gMap.Size = new System.Drawing.Size(800, 426);
+            this.gMap.Size = new System.Drawing.Size(1019, 387);
             this.gMap.TabIndex = 1;
             this.gMap.Zoom = 0D;
             // 
+            // tabTable
+            // 
+            this.tabTable.HorizontalScrollbarBarColor = true;
+            this.tabTable.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabTable.HorizontalScrollbarSize = 10;
+            this.tabTable.Location = new System.Drawing.Point(4, 38);
+            this.tabTable.Name = "tabTable";
+            this.tabTable.Size = new System.Drawing.Size(1019, 387);
+            this.tabTable.TabIndex = 1;
+            this.tabTable.Text = "  Table";
+            this.tabTable.VerticalScrollbarBarColor = true;
+            this.tabTable.VerticalScrollbarHighlightOnWheel = false;
+            this.tabTable.VerticalScrollbarSize = 10;
+            // 
+            // tabCharts
+            // 
+            this.tabCharts.HorizontalScrollbarBarColor = true;
+            this.tabCharts.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabCharts.HorizontalScrollbarSize = 10;
+            this.tabCharts.Location = new System.Drawing.Point(4, 38);
+            this.tabCharts.Name = "tabCharts";
+            this.tabCharts.Size = new System.Drawing.Size(1019, 387);
+            this.tabCharts.TabIndex = 2;
+            this.tabCharts.Text = "  Charts";
+            this.tabCharts.VerticalScrollbarBarColor = true;
+            this.tabCharts.VerticalScrollbarHighlightOnWheel = false;
+            this.tabCharts.VerticalScrollbarSize = 10;
+            // 
+            // importButton
+            // 
+            this.importButton.BackColor = System.Drawing.Color.White;
+            this.importButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.importButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.importButton.Location = new System.Drawing.Point(15, 11);
+            this.importButton.Margin = new System.Windows.Forms.Padding(15, 11, 3, 3);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(98, 34);
+            this.importButton.TabIndex = 1;
+            this.importButton.TabStop = false;
+            this.importButton.Text = "Import";
+            this.importButton.UseVisualStyleBackColor = false;
+            this.importButton.Click += new System.EventHandler(this.Import_Click);
+            this.importButton.MouseEnter += new System.EventHandler(this.OnMouseHoverImportButton);
+            this.importButton.MouseLeave += new System.EventHandler(this.OnMouseLeaveImportButton);
+            this.importButton.MouseHover += new System.EventHandler(this.OnMouseHoverImportButton);
+            // 
             // Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gMap);
-            this.Controls.Add(this.menu);
-            this.MainMenuStrip = this.menu;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.tabMenu);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Window";
-            this.Text = "Form1";
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
+            this.Style = MetroFramework.MetroColorStyle.Orange;
+            this.Text = "Breach Maps";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.styleManager)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.tabMenu.ResumeLayout(false);
+            this.tabMap.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem importButton;
-        private System.Windows.Forms.ToolStripMenuItem importMenu;
+        private MetroFramework.Components.MetroStyleManager styleManager;
+        private MetroFramework.Controls.MetroTabControl tabMenu;
+        private MetroFramework.Controls.MetroTabPage tabMap;
         private GMap.NET.WindowsForms.GMapControl gMap;
+        private MetroFramework.Controls.MetroTabPage tabTable;
+        private MetroFramework.Controls.MetroTabPage tabCharts;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button importButton;
     }
 }
 

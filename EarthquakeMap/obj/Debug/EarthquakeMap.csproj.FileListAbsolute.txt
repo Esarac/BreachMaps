@@ -23,3 +23,31 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\Newto
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.xml
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.CopyComplete
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EarthquakeMap.exe.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EarthquakeMap.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EarthquakeMap.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EntityFramework.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\GMap.NET.Core.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\GMap.NET.WindowsPresentation.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.Design.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EntityFramework.xml
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.xml
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csprojAssemblyReference.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Gui.Window.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Properties.Resources.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.GenerateResource.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.CoreCompileInputs.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.CopyComplete
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.pdb

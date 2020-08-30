@@ -16,7 +16,7 @@ using GMap.NET.MapProviders;
 
 namespace EarthquakeMap.Gui
 {
-    public partial class Window : Form
+    public partial class Window : MetroFramework.Forms.MetroForm
     {
         //Atributes
         private DataManager manager;
@@ -25,6 +25,16 @@ namespace EarthquakeMap.Gui
         public Window()
         {
             InitializeComponent();
+            InitializeImportButton();
+        }
+
+        //Initializers
+        public void InitializeImportButton()
+        {
+            importButton.FlatAppearance.MouseOverBackColor = importButton.BackColor;
+            importButton.BackColorChanged += (s, e) => {
+                importButton.FlatAppearance.MouseOverBackColor = importButton.BackColor;
+            };
         }
 
         //Triggers
@@ -38,6 +48,18 @@ namespace EarthquakeMap.Gui
                 //Init
                 GenerateMap();
             }
+        }
+
+        private void OnMouseHoverImportButton(object sender, EventArgs e)
+        {
+            importButton.BackColor = Color.DarkOrange;
+            importButton.ForeColor = Color.White;
+        }
+
+        private void OnMouseLeaveImportButton(object sender, EventArgs e)
+        {
+            importButton.BackColor = Color.White;
+            importButton.ForeColor = Color.Black;
         }
 
         //Generators
