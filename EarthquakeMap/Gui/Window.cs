@@ -47,6 +47,7 @@ namespace EarthquakeMap.Gui
                 this.manager = new DataManager(fileChooser.FileName);
                 //Init
                 GenerateMap();
+                GenerateTable();
             }
         }
 
@@ -81,6 +82,17 @@ namespace EarthquakeMap.Gui
                 GMapMarker marker = new GMarkerGoogle(new PointLatLng(eq.Latitude, eq.Longitude), GMarkerGoogleType.red_dot);
                 markers.Markers.Add(marker);
                 gMap.Overlays.Add(markers);
+            }
+        }
+
+        private void GenerateTable()
+        {
+            table.DataSource = manager.GenerateTable();
+            table.ColumnHeadersDefaultCellStyle.Font = new Font(DataGridView.DefaultFont, FontStyle.Bold);
+
+            foreach (DataGridViewColumn column in table.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
     }

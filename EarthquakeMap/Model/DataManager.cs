@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Data;
 
 namespace EarthquakeMap.Model
 {
@@ -64,6 +65,38 @@ namespace EarthquakeMap.Model
                 }
                 //...
             }
+        }
+
+        public DataTable GenerateTable()
+        {
+            DataTable table = new DataTable();
+
+            table.Columns.Add("ID", typeof(string));
+            table.Columns.Add("DATE", typeof(DateTime));
+            table.Columns.Add("LATITUDE", typeof(double));
+            table.Columns.Add("LONGITUDE", typeof(double));
+            table.Columns.Add("TYPE", typeof(string));
+            table.Columns.Add("DEPTH", typeof(double));
+            table.Columns.Add("MAGNITUDE", typeof(double));
+            table.Columns.Add("MAGNITUDE TYPE", typeof(string));
+
+            foreach(Earthquake earthquake in earthquakes)
+            {
+                DataRow row = table.NewRow();
+
+                row["ID"] = earthquake.Id;
+                row["DATE"] = earthquake.Date;
+                row["LATITUDE"] = earthquake.Latitude;
+                row["LONGITUDE"] = earthquake.Longitude;
+                row["TYPE"] = earthquake.Type;
+                row["DEPTH"] = earthquake.Depth;
+                row["MAGNITUDE"] = earthquake.Magnitude;
+                row["MAGNITUDE TYPE"] = earthquake.MagnitudeType;
+
+                table.Rows.Add(row);
+            }
+
+            return table;
         }
 
         public override string ToString()
