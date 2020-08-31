@@ -55,7 +55,13 @@ namespace EarthquakeMap.Model
                     string type = dataInfo[4];
                     double depth = Double.Parse(dataInfo[5], culture);
                     double magnitude = Double.Parse(dataInfo[8], culture);
-                    string magnitudeType = dataInfo[9];
+
+                    Earthquake.EarthquakeMagnitudeType magnitudeType = Earthquake.EarthquakeMagnitudeType.NAN;
+                    if (!String.IsNullOrEmpty(dataInfo[9]))
+                    {
+                        magnitudeType = (Earthquake.EarthquakeMagnitudeType)Enum.Parse(typeof(Earthquake.EarthquakeMagnitudeType), dataInfo[9]);
+                    }
+                    
 
                     Earthquake eq = new Earthquake(id, latitude, longitude, date, type, depth, magnitude, magnitudeType);
                     earthquakes.Add(eq);
@@ -94,6 +100,37 @@ namespace EarthquakeMap.Model
                 row["MAGNITUDE TYPE"] = earthquake.MagnitudeType;
 
                 table.Rows.Add(row);
+            }
+
+            return table;
+        }
+
+        public DataTable GenerateMagnitudeTypeChart()
+        {
+            DataTable table = new DataTable();
+
+            table.Columns.Add("X", typeof(string));
+            table.Columns.Add("Y", typeof(int));
+
+            string[] magnitudeTypes = Enum.GetNames(typeof(Earthquake.EarthquakeMagnitudeType));
+            for (int i = 0; i < magnitudeTypes.Length; i++)
+            {
+                DataRow row = table.NewRow();
+
+                row["X"] = magnitudeTypes[i];
+                row["Y"] = 0;
+
+                table.Rows.Add(row);
+            }
+
+            for (int i = 0; i < earthquakes.Count; i++)
+            {
+                table.Rows[(int)earthquakes[i].MagnitudeType]["Y"] = ((int)table.Rows[0]["Y"]) + 1;
+            }
+
+            for (int i = 0; i < magnitudeTypes.Length; i++)
+            {
+                Console.WriteLine(table.Rows[i]["X"]+": "+ table.Rows[i]["Y"]);
             }
 
             return table;

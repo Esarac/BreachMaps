@@ -48,6 +48,7 @@ namespace EarthquakeMap.Gui
                 //Init
                 GenerateMap();
                 GenerateTable();
+                GenerateChart();
             }
         }
 
@@ -94,6 +95,16 @@ namespace EarthquakeMap.Gui
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+        }
+
+        private void GenerateChart()
+        {
+            //Config
+            chart.Series["s"].XValueMember = "X";
+            chart.Series["s"].YValueMembers = "Y";
+            //...
+            chart.DataSource = manager.GenerateMagnitudeTypeChart();
+            chart.DataBind();
         }
     }
 }

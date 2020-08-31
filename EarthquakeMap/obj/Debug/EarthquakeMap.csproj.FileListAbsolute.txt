@@ -51,3 +51,6 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\De
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.CopyComplete
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.Design.dll
+C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.dll
+C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.Fonts.dll
