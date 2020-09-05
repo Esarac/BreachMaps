@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace EarthquakeMap.Model
 {
-    class Earthquake
+    public class Earthquake
     {
         //Constants
         public enum EarthquakeType
         {
-            EARTQUAKE,
+            EARTHQUAKE,
             NUCLEAR_EXPLOSION,
             EXPLOSION,
             ROCK_BURST

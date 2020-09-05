@@ -12,7 +12,7 @@ using System.Security.Policy;
 
 namespace EarthquakeMap.Model
 {
-    class DataManager
+    public class DataManager
     {
         //Attributes
         private List<Earthquake> earthquakes;
