@@ -88,7 +88,7 @@ namespace EarthquakeMap.Gui
 
         private void GenerateTable()
         {
-            table.DataSource = manager.GenerateTable();
+            table.DataSource = manager.GenerateDataTable();
             table.ColumnHeadersDefaultCellStyle.Font = new Font(DataGridView.DefaultFont, FontStyle.Bold);
 
             foreach (DataGridViewColumn column in table.Columns)
@@ -103,7 +103,7 @@ namespace EarthquakeMap.Gui
             chart.Series["s"].XValueMember = "X";
             chart.Series["s"].YValueMembers = "Y";
             //...
-            chart.DataSource = manager.GenerateMagnitudeTypeChart();
+            chart.DataSource = manager.GenerateBarChart();
             chart.DataBind();
         }
     }

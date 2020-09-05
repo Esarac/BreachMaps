@@ -10,6 +10,14 @@ namespace EarthquakeMap.Model
     class Earthquake
     {
         //Constants
+        public enum EarthquakeType
+        {
+            EARTQUAKE,
+            NUCLEAR_EXPLOSION,
+            EXPLOSION,
+            ROCK_BURST
+        }
+
         public enum EarthquakeMagnitudeType
         {
             MW,
@@ -32,7 +40,7 @@ namespace EarthquakeMap.Model
         private double longitude;
 
         private DateTime date;
-        private string type;
+        private EarthquakeType type;
 
         private double depth;
 
@@ -64,7 +72,7 @@ namespace EarthquakeMap.Model
             set { this.date = value; }
         }
 
-        public string Type
+        public EarthquakeType Type
         {
             get { return type; }
             set { this.type = value; }
@@ -89,7 +97,7 @@ namespace EarthquakeMap.Model
         }
 
         //Constructor
-        public Earthquake(string id, double latitude, double longitude, DateTime date, string type, double depth, double magnitude, EarthquakeMagnitudeType magnitudeType)
+        public Earthquake(string id, double latitude, double longitude, DateTime date, EarthquakeType type, double depth, double magnitude, EarthquakeMagnitudeType magnitudeType)
         {
             this.id = id;
             this.latitude = latitude;
