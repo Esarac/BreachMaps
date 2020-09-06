@@ -24,6 +24,7 @@ namespace EarthquakeMap.Gui
         {
             InitializeComponent();
             InitializeApplyButton();
+            Track();
 
         }
 
@@ -48,8 +49,8 @@ namespace EarthquakeMap.Gui
             gMap.DragButton = MouseButtons.Left;
             gMap.CanDragMap = true;
             gMap.MapProvider = GMapProviders.GoogleMap;
-            gMap.Position = new PointLatLng(manager.Earthquakes[0].Latitude, manager.Earthquakes[0].Longitude);
-            gMap.MinZoom = 0;
+            gMap.Position = new PointLatLng(0,0);
+            gMap.MinZoom = 3;
             gMap.MaxZoom = 24;
             gMap.Zoom = 9;
             gMap.AutoScroll = true;
@@ -83,11 +84,35 @@ namespace EarthquakeMap.Gui
 
                 foreach (Earthquake eq in earthquakes)
                 {
-                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(eq.Latitude, eq.Longitude), GMarkerGoogleType.red_dot);
+                    GMarkerGoogleType pin = GMarkerGoogleType.red_small;
+
+                    switch (eq.Type)
+                    {
+                        case Earthquake.EarthquakeType.EXPLOSION:
+                            pin = GMarkerGoogleType.blue_small;
+                            break;
+
+                        case Earthquake.EarthquakeType.NUCLEAR_EXPLOSION:
+                            pin = GMarkerGoogleType.green_small;
+                            break;
+
+                        case Earthquake.EarthquakeType.ROCK_BURST:
+                            pin = GMarkerGoogleType.yellow_small;
+                            break;
+                    }
+                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(eq.Latitude, eq.Longitude), pin);
+                    marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                    marker.ToolTipText = string.Format("\n{0}\nID: {1}\nCOORDINATES: {2},{3}\nDATE: {4}\nDEPTH: {5}\nMAGNITUDE: {6} {7}", eq.Type.ToString(), eq.Id, eq.Latitude, eq.Longitude, eq.Date.ToString(), eq.Depth, eq.Magnitude, eq.MagnitudeType.ToString());
                     markers.Markers.Add(marker);
-                    gMap.Overlays.Add(markers);
                 }
+
+                gMap.Overlays.Add(markers);
             }
+        }
+
+        private void Track()
+        {
+            yearTrack.UseStyleColors = true;
         }
     }
 }

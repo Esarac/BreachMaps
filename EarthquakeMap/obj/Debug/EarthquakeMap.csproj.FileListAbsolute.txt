@@ -54,3 +54,4 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\Metro
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.dll
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Gui.MapTab.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csprojAssemblyReference.cache

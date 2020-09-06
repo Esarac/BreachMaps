@@ -51,14 +51,18 @@
             // yearTrack
             // 
             this.yearTrack.BackColor = System.Drawing.Color.Transparent;
+            this.yearTrack.ForeColor = System.Drawing.Color.DarkOrange;
             this.yearTrack.Location = new System.Drawing.Point(11, 13);
             this.yearTrack.Margin = new System.Windows.Forms.Padding(11, 13, 3, 3);
             this.yearTrack.Maximum = 2016;
             this.yearTrack.Minimum = 1965;
             this.yearTrack.Name = "yearTrack";
             this.yearTrack.Size = new System.Drawing.Size(197, 23);
+            this.yearTrack.Style = MetroFramework.MetroColorStyle.Orange;
             this.yearTrack.TabIndex = 0;
             this.yearTrack.Text = "yearTrack";
+            this.yearTrack.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.yearTrack.UseCustomBackColor = true;
             this.yearTrack.Value = 1965;
             this.yearTrack.Scroll += new System.Windows.Forms.ScrollEventHandler(this.yearTrack_Scroll);
             // 
