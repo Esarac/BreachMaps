@@ -43,7 +43,7 @@ namespace EarthquakeMap.Gui
                 //Init
                 mapTab.InitializeController(manager);
                 GenerateTable();
-                GenerateChart();
+                chartTab.InitializeCharts(manager);
             }
         }
 
@@ -71,14 +71,5 @@ namespace EarthquakeMap.Gui
             }
         }
 
-        private void GenerateChart()
-        {
-            //Config
-            chart.Series["s"].XValueMember = "X";
-            chart.Series["s"].YValueMembers = "Y";
-            //...
-            chart.DataSource = manager.GenerateBarChart();
-            chart.DataBind();
-        }
     }
 }

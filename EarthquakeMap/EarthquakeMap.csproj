@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gui\chartTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\chartTab.Designer.cs">
+      <DependentUpon>chartTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\mapTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\Earthquake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gui\chartTab.resx">
+      <DependentUpon>chartTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\mapTab.resx">
       <DependentUpon>mapTab.cs</DependentUpon>
     </EmbeddedResource>

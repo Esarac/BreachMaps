@@ -1,7 +1,6 @@
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\EarthquakeMap.exe.config
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\EarthquakeMap.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\EarthquakeMap.pdb
-C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csprojAssemblyReference.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Properties.Resources.resources
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.GenerateResource.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csproj.CoreCompileInputs.cache
@@ -55,3 +54,5 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\Metro
 C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Gui.MapTab.resources
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Gui.chartTab.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\JohanMap\EarthquakeMap\obj\Debug\EarthquakeMap.Gui.MapTab.resources

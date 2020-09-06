@@ -336,14 +336,16 @@ namespace EarthquakeMap.Model
             DataTable table = new DataTable();
 
             table.Columns.Add("X", typeof(int));
-            table.Columns.Add("Y", typeof(int));
+            table.Columns.Add("Y", typeof(double));
 
             for (int i = 0; i < earthquakes.Count; i++)
             {
                 bool exist = false;
-                for(int j = table.Rows.Count-1; (j >= 0) && !exist; j++)
+                for(int j = table.Rows.Count-1; (j >= 0) && !exist; j--)
                 {
-                    if (((int)table.Rows[j]["X"]) == earthquakes[i].Date.Year) 
+                    Console.WriteLine(earthquakes[i].Date.Year);
+                    Console.WriteLine(table.Rows[j]["X"]);
+                    if (((int)table.Rows[j]["X"]) == earthquakes[i].Date.Year)
                     {
                         exist = true;
                     }
@@ -363,17 +365,17 @@ namespace EarthquakeMap.Model
             return table;
         }
 
-        public DataTable GeneratePieChart()//Type vs Quantity
+        public DataTable GeneratePieChart()//Type vs AverageMagnitude
         {
             DataTable table = new DataTable();
 
             table.Columns.Add("X", typeof(string));
-            table.Columns.Add("Y", typeof(int));
+            table.Columns.Add("Y", typeof(double));
 
             for (int i = 0; i < earthquakes.Count; i++)
             {
                 bool exist = false;
-                for (int j = table.Rows.Count - 1; (j >= 0) && !exist; j++)
+                for (int j = table.Rows.Count - 1; (j >= 0) && !exist; j--)
                 {
                     if (((string)table.Rows[j]["X"]).Equals(earthquakes[i].Type.ToString()))
                     {

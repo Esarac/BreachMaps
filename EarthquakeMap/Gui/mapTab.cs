@@ -28,6 +28,7 @@ namespace EarthquakeMap.Gui
 
         }
 
+        //Intializer
         private void InitializeApplyButton()
         {
             applyButton.FlatAppearance.MouseOverBackColor = applyButton.BackColor;
@@ -40,6 +41,11 @@ namespace EarthquakeMap.Gui
         {
             this.manager = manager;
             GenerateMap();
+        }
+
+        private void Track()
+        {
+            yearTrack.UseStyleColors = true;
         }
 
         //Generator
@@ -56,6 +62,7 @@ namespace EarthquakeMap.Gui
             gMap.AutoScroll = true;
         }
 
+        //Triggers
         private void yearTrack_Scroll(object sender, ScrollEventArgs e)
         {
             yearLabel.Text = yearTrack.Value.ToString();
@@ -110,9 +117,5 @@ namespace EarthquakeMap.Gui
             }
         }
 
-        private void Track()
-        {
-            yearTrack.UseStyleColors = true;
-        }
     }
 }
