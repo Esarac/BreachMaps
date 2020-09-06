@@ -41,8 +41,8 @@ namespace EarthquakeMap.Gui
             {
                 this.manager = new DataManager(fileChooser.FileName);
                 //Init
-                mapTab.InitializeController(manager);
-                GenerateTable();
+                mapTab.InitializeMap(manager);
+                tableTab.InitializeTable(manager);
                 chartTab.InitializeCharts(manager);
             }
         }
@@ -58,18 +58,5 @@ namespace EarthquakeMap.Gui
             importButton.BackColor = Color.White;
             importButton.ForeColor = Color.Black;
         }
-
-        //Generators
-        private void GenerateTable()
-        {
-            table.DataSource = manager.GenerateDataTable();
-            table.ColumnHeadersDefaultCellStyle.Font = new Font(DataGridView.DefaultFont, FontStyle.Bold);
-
-            foreach (DataGridViewColumn column in table.Columns)
-            {
-                column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
-        }
-
     }
 }

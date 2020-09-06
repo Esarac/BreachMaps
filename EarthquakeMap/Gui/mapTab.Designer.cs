@@ -51,6 +51,7 @@
             // yearTrack
             // 
             this.yearTrack.BackColor = System.Drawing.Color.Transparent;
+            this.yearTrack.Enabled = false;
             this.yearTrack.ForeColor = System.Drawing.Color.DarkOrange;
             this.yearTrack.Location = new System.Drawing.Point(11, 13);
             this.yearTrack.Margin = new System.Windows.Forms.Padding(11, 13, 3, 3);
@@ -69,6 +70,7 @@
             // yearLabel
             // 
             this.yearLabel.AutoSize = true;
+            this.yearLabel.Enabled = false;
             this.yearLabel.Location = new System.Drawing.Point(211, 15);
             this.yearLabel.Margin = new System.Windows.Forms.Padding(0, 15, 3, 0);
             this.yearLabel.Name = "yearLabel";
@@ -79,6 +81,7 @@
             // applyButton
             // 
             this.applyButton.BackColor = System.Drawing.Color.White;
+            this.applyButton.Enabled = false;
             this.applyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.applyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

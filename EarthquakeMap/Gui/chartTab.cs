@@ -11,13 +11,13 @@ using EarthquakeMap.Model;
 
 namespace EarthquakeMap.Gui
 {
-    public partial class chartTab : UserControl
+    public partial class ChartTab : UserControl
     {
         //Attribute
         private DataManager manager;
 
         //Constructor
-        public chartTab()
+        public ChartTab()
         {
             InitializeComponent();
         }

@@ -37,10 +37,13 @@ namespace EarthquakeMap.Gui
             };
         }
 
-        public void InitializeController(DataManager manager)
+        public void InitializeMap(DataManager manager)
         {
             this.manager = manager;
             GenerateMap();
+            yearTrack.Enabled = true;
+            yearLabel.Enabled = true;
+            applyButton.Enabled = true;
         }
 
         private void Track()
@@ -82,40 +85,36 @@ namespace EarthquakeMap.Gui
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            if(manager != null)
+            List<Earthquake> earthquakes = manager.GetEarthquakes(Int32.Parse(yearTrack.Value.ToString()));
+            gMap.Overlays.Clear();
+
+            GMapOverlay markers = new GMapOverlay("markers");
+
+            foreach (Earthquake eq in earthquakes)
             {
-                List<Earthquake> earthquakes = manager.GetEarthquakes(Int32.Parse(yearTrack.Value.ToString()));
-                gMap.Overlays.Clear();
+                GMarkerGoogleType pin = GMarkerGoogleType.red_small;
 
-                GMapOverlay markers = new GMapOverlay("markers");
-
-                foreach (Earthquake eq in earthquakes)
+                switch (eq.Type)
                 {
-                    GMarkerGoogleType pin = GMarkerGoogleType.red_small;
+                    case Earthquake.EarthquakeType.EXPLOSION:
+                        pin = GMarkerGoogleType.blue_small;
+                        break;
 
-                    switch (eq.Type)
-                    {
-                        case Earthquake.EarthquakeType.EXPLOSION:
-                            pin = GMarkerGoogleType.blue_small;
-                            break;
+                    case Earthquake.EarthquakeType.NUCLEAR_EXPLOSION:
+                        pin = GMarkerGoogleType.green_small;
+                        break;
 
-                        case Earthquake.EarthquakeType.NUCLEAR_EXPLOSION:
-                            pin = GMarkerGoogleType.green_small;
-                            break;
-
-                        case Earthquake.EarthquakeType.ROCK_BURST:
-                            pin = GMarkerGoogleType.yellow_small;
-                            break;
-                    }
-                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(eq.Latitude, eq.Longitude), pin);
-                    marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                    marker.ToolTipText = string.Format("\n{0}\nID: {1}\nCOORDINATES: {2},{3}\nDATE: {4}\nDEPTH: {5}\nMAGNITUDE: {6} {7}", eq.Type.ToString(), eq.Id, eq.Latitude, eq.Longitude, eq.Date.ToString(), eq.Depth, eq.Magnitude, eq.MagnitudeType.ToString());
-                    markers.Markers.Add(marker);
+                    case Earthquake.EarthquakeType.ROCK_BURST:
+                        pin = GMarkerGoogleType.yellow_small;
+                        break;
                 }
-
-                gMap.Overlays.Add(markers);
+                GMapMarker marker = new GMarkerGoogle(new PointLatLng(eq.Latitude, eq.Longitude), pin);
+                marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                marker.ToolTipText = string.Format("\n{0}\nID: {1}\nCOORDINATES: {2},{3}\nDATE: {4}\nDEPTH: {5}\nMAGNITUDE: {6} {7}", eq.Type.ToString(), eq.Id, eq.Latitude, eq.Longitude, eq.Date.ToString(), eq.Depth, eq.Magnitude, eq.MagnitudeType.ToString());
+                markers.Markers.Add(marker);
             }
-        }
 
+            gMap.Overlays.Add(markers);
+        }
     }
 }

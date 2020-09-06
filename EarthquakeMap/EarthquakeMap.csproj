@@ -102,6 +102,12 @@
     <Compile Include="Gui\mapTab.Designer.cs">
       <DependentUpon>mapTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\tableTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\tableTab.Designer.cs">
+      <DependentUpon>tableTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\mapTab.resx">
       <DependentUpon>mapTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\tableTab.resx">
+      <DependentUpon>tableTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>

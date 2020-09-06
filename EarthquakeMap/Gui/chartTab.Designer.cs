@@ -1,6 +1,6 @@
 ﻿namespace EarthquakeMap.Gui
 {
-    partial class chartTab
+    partial class ChartTab
     {
         /// <summary> 
         /// Required designer variable.
