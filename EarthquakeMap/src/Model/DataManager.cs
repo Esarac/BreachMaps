@@ -323,11 +323,6 @@ namespace EarthquakeMap.Model
                 table.Rows[(int)earthquakes[i].MagnitudeType]["Y"] = ((int)table.Rows[0]["Y"]) + 1;
             }
 
-            for (int i = 0; i < magnitudeTypes.Length; i++)
-            {
-                Console.WriteLine(table.Rows[i]["X"]+": "+ table.Rows[i]["Y"]);
-            }
-
             return table;
         }
 
@@ -343,8 +338,6 @@ namespace EarthquakeMap.Model
                 bool exist = false;
                 for(int j = table.Rows.Count-1; (j >= 0) && !exist; j--)
                 {
-                    Console.WriteLine(earthquakes[i].Date.Year);
-                    Console.WriteLine(table.Rows[j]["X"]);
                     if (((int)table.Rows[j]["X"]) == earthquakes[i].Date.Year)
                     {
                         exist = true;

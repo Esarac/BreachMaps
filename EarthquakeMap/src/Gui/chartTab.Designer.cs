@@ -31,12 +31,15 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.splitPanel1 = new System.Windows.Forms.SplitContainer();
             this.barChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitPanel2 = new System.Windows.Forms.SplitContainer();
@@ -77,18 +80,35 @@
             chartArea1.Name = "ChartArea1";
             this.barChart.ChartAreas.Add(chartArea1);
             this.barChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.barChart.Legends.Add(legend1);
             this.barChart.Location = new System.Drawing.Point(0, 0);
             this.barChart.Name = "barChart";
+            this.barChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.barChart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Color = System.Drawing.Color.DarkOrange;
+            series1.CustomProperties = "DrawSideBySide=True";
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.IsXValueIndexed = true;
+            series1.Label = "#VALX (#VAL)";
+            series1.LabelBackColor = System.Drawing.Color.Transparent;
             series1.Legend = "Legend1";
+            series1.LegendText = "#VAL";
             series1.Name = "s";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.barChart.Series.Add(series1);
             this.barChart.Size = new System.Drawing.Size(421, 604);
             this.barChart.TabIndex = 0;
             this.barChart.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.DarkOrange;
+            title1.Name = "Title1";
+            title1.Text = "MAGNITUDE TYPES QUANTITY";
+            this.barChart.Titles.Add(title1);
             // 
             // splitPanel2
             // 
@@ -112,18 +132,28 @@
             chartArea2.Name = "ChartArea1";
             this.pointChart.ChartAreas.Add(chartArea2);
             this.pointChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Enabled = false;
             legend2.Name = "Legend1";
             this.pointChart.Legends.Add(legend2);
             this.pointChart.Location = new System.Drawing.Point(0, 0);
             this.pointChart.Name = "pointChart";
+            this.pointChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.DarkOrange;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.IsVisibleInLegend = false;
             series2.Legend = "Legend1";
             series2.Name = "s";
             this.pointChart.Series.Add(series2);
             this.pointChart.Size = new System.Drawing.Size(399, 604);
             this.pointChart.TabIndex = 0;
             this.pointChart.Text = "chart2";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.DarkOrange;
+            title2.Name = "Title1";
+            title2.Text = "AVERAGE MAGNITUDE THROUGH THE YEARS";
+            this.pointChart.Titles.Add(title2);
             // 
             // pieChart
             // 
@@ -134,21 +164,32 @@
             this.pieChart.Legends.Add(legend3);
             this.pieChart.Location = new System.Drawing.Point(0, 0);
             this.pieChart.Name = "pieChart";
+            this.pieChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Color = System.Drawing.Color.DarkOrange;
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.IsValueShownAsLabel = true;
+            series3.LabelBackColor = System.Drawing.Color.Transparent;
+            series3.LabelBorderColor = System.Drawing.Color.Transparent;
             series3.Legend = "Legend1";
             series3.Name = "s";
             this.pieChart.Series.Add(series3);
             this.pieChart.Size = new System.Drawing.Size(435, 604);
             this.pieChart.TabIndex = 0;
             this.pieChart.Text = "chart3";
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.ForeColor = System.Drawing.Color.DarkOrange;
+            title3.Name = "Title1";
+            title3.Text = "EARTHQUAKES TYPE AVERAGE MAGNITUDE";
+            this.pieChart.Titles.Add(title3);
             // 
-            // chartTab
+            // ChartTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitPanel1);
-            this.Name = "chartTab";
+            this.Name = "ChartTab";
             this.Size = new System.Drawing.Size(1263, 604);
             this.splitPanel1.Panel1.ResumeLayout(false);
             this.splitPanel1.Panel2.ResumeLayout(false);
