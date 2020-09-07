@@ -44,7 +44,7 @@ namespace EarthquakeMap.Gui
 
         private void InitializeAttributeComboBox()
         {
-            attributeComboBox.Items.AddRange(new string[] { "Id", "Latitude", "Longitude", "Date", "Type", "Depth", "Magnitude", "Magnitude type", "All" });
+            attributeComboBox.Items.AddRange(new string[] { "All", "Id", "Latitude", "Longitude", "Date", "Type", "Depth", "Magnitude", "Magnitude type" });
             attributeComboBox.SelectedIndex = 0;
         }
 
@@ -101,8 +101,18 @@ namespace EarthquakeMap.Gui
 
             switch (index)
             {
-                //id
+                //All
                 case 0:
+                    enumComboBox.Visible = false;
+                    stringTextBox.Visible = false;
+                    minTextBox.Visible = false;
+                    maxTextBox.Visible = false;
+                    minDate.Visible = false;
+                    maxDate.Visible = false;
+                    break;
+
+                //id
+                case 1:
 
                     enumComboBox.Visible = false;
                     stringTextBox.Visible = true;
@@ -114,7 +124,7 @@ namespace EarthquakeMap.Gui
                     break;
                 
                 //date
-                case 3:
+                case 4:
 
                     enumComboBox.Visible = false;
                     stringTextBox.Visible = false;
@@ -126,7 +136,7 @@ namespace EarthquakeMap.Gui
                     break;
                 
                 //type
-                case 4:
+                case 5:
 
                     enumComboBox.Visible = true;
                     stringTextBox.Visible = false;
@@ -138,7 +148,7 @@ namespace EarthquakeMap.Gui
                     break;
                 
                 //magnitudeType
-                case 7:
+                case 8:
                     enumComboBox.Visible = true;
                     stringTextBox.Visible = false;
                     minTextBox.Visible = false;
@@ -148,15 +158,6 @@ namespace EarthquakeMap.Gui
                     InitializeMagnitudeTypeComboBox();
                     break;
                 
-                //All
-                case 8:
-                    enumComboBox.Visible = false;
-                    stringTextBox.Visible = false;
-                    minTextBox.Visible = false;
-                    maxTextBox.Visible = false;
-                    minDate.Visible = false;
-                    maxDate.Visible = false;
-                    break;
 
                 //latitude, longitude, depth and magnitude
                 default:
@@ -179,14 +180,20 @@ namespace EarthquakeMap.Gui
 
             switch (index)
             {
-                //id
+                //All
                 case 0:
+
+                    table.DataSource = manager.GenerateDataTable();
+                    break;
+
+                //id
+                case 1:
 
                     table.DataSource = manager.GenerateIdTable(stringTextBox.Text);
                     break;
 
                 //latitude
-                case 1:
+                case 2:
 
                     try
                     {
@@ -201,7 +208,7 @@ namespace EarthquakeMap.Gui
                     break;
 
                 //latitude
-                case 2:
+                case 3:
 
                     try
                     {
@@ -216,18 +223,18 @@ namespace EarthquakeMap.Gui
                     break;
 
                 //date
-                case 3:
+                case 4:
 
                     table.DataSource = manager.GenerateDateTable(minDate.Value, maxDate.Value);
                     break;
 
                 //type
-                case 4:
+                case 5:
                     table.DataSource = manager.GenerateTypeTable((Earthquake.EarthquakeType)enumComboBox.SelectedItem);
                     break;
 
                 //latitude
-                case 5:
+                case 6:
 
                     try
                     {
@@ -242,7 +249,7 @@ namespace EarthquakeMap.Gui
                     break;
 
                 //latitude
-                case 6:
+                case 7:
 
                     try
                     {
@@ -258,15 +265,9 @@ namespace EarthquakeMap.Gui
 
 
                 //magnitudeType
-                case 7:
-
-                    table.DataSource = manager.GenerateMagnitudeTypeTable((Earthquake.EarthquakeMagnitudeType) enumComboBox.SelectedItem);
-                    break;
-
-                //All
                 case 8:
 
-                    table.DataSource = manager.GenerateDataTable();
+                    table.DataSource = manager.GenerateMagnitudeTypeTable((Earthquake.EarthquakeMagnitudeType) enumComboBox.SelectedItem);
                     break;
             }
         }
